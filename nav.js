@@ -2,8 +2,6 @@ const burgerButton = document.querySelector(".burger-button");
 const navMenu = document.querySelector(".nav-menu");
 const closeButton = document.querySelector(".close-menu");
 const menuItems = document.querySelectorAll(".nav-menu li a");
-const parentCategory = document.querySelector(".parent-category");
-const menuItem = document.querySelector(".menu-item");
 
 burgerButton.addEventListener("click", () => {
 	burgerButton.classList.toggle("open");
@@ -20,11 +18,4 @@ menuItems.forEach((item) => {
 
 		this.classList.add("active");
 	});
-});
-
-parentCategory.addEventListener("click", function (event) {
-	event.preventDefault(); // Zapobiega przeładowaniu strony
-
-	// Przełączanie klasy 'active' na elemencie menu-item
-	menuItem.classList.toggle("active");
 });
