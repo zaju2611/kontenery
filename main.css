@@ -1,0 +1,191 @@
+:root {
+	--white: #fff;
+	--navy: #213555;
+	--grey: #3e5879;
+	--beige: #d8c4b6;
+	--light-beige: #f1f1f1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Host Grotesk", serif;
+	font-weight: 300;
+}
+
+body {
+	position: relative;
+}
+a {
+	color: black;
+}
+/*header*/
+
+/*animacja płynący tekst*/
+.text-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	background: var(--navy);
+	overflow: hidden;
+	position: relative;
+	padding: 0.3rem;
+}
+
+.text-wrapper p {
+	font-size: 1rem;
+	color: white;
+	white-space: nowrap;
+	padding: 0 2rem;
+	animation: scroll-left 5s linear infinite;
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-200%);
+	}
+}
+
+/* contact section */
+.contact-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.contact-header h3 {
+	font-size: 1rem;
+	margin-bottom: 0.5em;
+}
+
+.contact-link a {
+	text-decoration: none;
+	color: inherit;
+}
+.contact-link {
+	margin: 0.3em;
+}
+
+/*nav section*/
+
+.nav-section {
+	position: relative;
+	display: flex;
+	background: var(--light-beige);
+	padding: 0.7em;
+}
+
+.logo {
+	width: 200px;
+	margin-left: 20px;
+}
+
+.burger-button {
+	position: absolute;
+	z-index: 1000;
+	top: 25px;
+	right: 35px;
+}
+
+.icon {
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	background: transparent;
+}
+.nav-menu {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: -500px;
+	height: 100%;
+	width: 100%;
+	background: var(--white);
+	overflow-y: auto;
+	transition: left 0.6s ease-in-out;
+	box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+	z-index: 1001;
+	list-style: none;
+	padding: 0;
+}
+
+.nav-menu.show {
+	left: 0;
+}
+
+.nav-menu li {
+	padding: 20px;
+}
+
+.nav-menu li a {
+	text-decoration: none;
+	font-size: 0.8rem;
+}
+
+.title-section {
+	padding: 2em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-title {
+	position: absolute;
+	top: 50px;
+	margin-left: 15px;
+}
+.close-menu {
+	position: absolute;
+	top: 25px;
+	right: 35px;
+	font-size: 2rem;
+}
+
+.active {
+	background: var(--grey);
+	padding: 5px 100px;
+	border-radius: 20px;
+	color: var(--white);
+}
+
+.subcategories {
+	display: none; /* Ukrywamy subkategorie domyślnie */
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	list-style: none;
+	background-color: var(--white);
+	width: 100%; /* Zapewniamy, że subkategorie zajmą całą szerokość */
+	padding: 10px;
+}
+.menu-item.active .subcategories {
+	display: flex; /* Pokazuje subkategorie, gdy element ma klasę active */
+}
+/* .menu-item.active .subcategories {
+	display: block;
+} */
+
+/* .menu-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.parent-category {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.parent-category i {
+	position: absolute;
+	right: -80px;
+	z-index: 10;
+} */
