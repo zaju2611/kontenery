@@ -33,10 +33,14 @@ h1 {
 }
 h2 {
 	font-size: 1.3rem;
-	text-align: center;
 }
 h3 {
 	font-size: 1rem;
+}
+
+.wrapper {
+	max-width: 1200px; /* Maksymalna szerokość */
+	margin: 0 auto; /* Wyśrodkowanie poziome */
 }
 /*header*/
 
@@ -68,7 +72,7 @@ h3 {
 }
 
 /* contact section */
-.contact-header {
+.contact-data {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -76,7 +80,7 @@ h3 {
 	padding: 10px;
 }
 
-.contact-header h3 {
+.contact-data h3 {
 	margin-bottom: 0.5em;
 }
 
@@ -96,7 +100,9 @@ h3 {
 	background: var(--light-beige);
 	padding: 0.7em;
 }
-
+.logo-header {
+	display: none;
+}
 .logo {
 	width: 200px;
 	margin-left: 20px;
@@ -239,12 +245,11 @@ footer {
 
 /*container card*/
 .container-card {
+	position: relative;
 	width: 100%;
-	height: 450px;
+	height: 525px;
 	overflow: hidden;
-
-	display: flex;
-
+	flex-direction: column;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -272,11 +277,10 @@ footer {
 }
 
 .card-text {
-	padding: 20px;
+	padding: 10px 20px;
 }
 .container-card h2 {
 	font-size: 1.1rem;
-	margin: 10px 0;
 }
 
 .container-card p {
@@ -285,6 +289,8 @@ footer {
 }
 
 .container-card button {
+	position: absolute;
+	bottom: 15px;
 	width: 50%;
 	max-width: 200px;
 	padding: 10px;
@@ -323,23 +329,39 @@ footer {
 .container-map-section .intro-text {
 	text-align: center;
 }
-.opinion-box {
-	margin: 0.9em;
+.opinion {
+	text-align: center;
+	padding: 20px;
 }
 
-.opinion-box:nth-child(even) {
-	border-bottom: 1px solid var(--navy);
+.opinion-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid var(--navy); /* Kreska pod grupą */
+	padding: 15px 0;
+	margin: 15px 0;
+}
+
+.opinion-box {
+	width: 100%; /* Szerokość każdej opinii */
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 .opinion-box i {
 	font-size: 2.3rem;
 	margin-bottom: 0.5em;
 }
+
 .client-name {
 	font-size: 1.3rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
 .client-opinion {
 	margin-bottom: 1.5em;
 }
@@ -557,4 +579,84 @@ footer {
 .footer-info {
 	text-align: center;
 	font-size: 0.6rem;
+}
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.6rem;
+	}
+	h3 {
+		font-size: 1.3rem;
+	}
+
+	.intro-text,
+	.product-description,
+	.offer-description,
+	.container-options,
+	.client-opinion,
+	.container-list {
+		font-size: 1rem;
+	}
+
+	.contact-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 20px;
+	}
+	.contact-data {
+		flex-direction: row;
+	}
+	.logo-header {
+		display: block;
+	}
+	.logo-nav {
+		display: none;
+	}
+	.contact-data h3 {
+		margin: 0;
+		margin-right: 20px;
+	}
+	.image-section {
+		height: 600px;
+	}
+	.about {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 40px;
+	}
+	.about-box {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		margin-right: 70px;
+	}
+	.container-image {
+		max-width: 700px;
+		max-height: 700px;
+	}
+	.containers-cards {
+		display: grid;
+		grid-template-columns: repeat(
+			3,
+			1fr
+		); /* Trzy kolumny o równej szerokości */
+		gap: 20px; /* Odstępy między kartami */
+	}
+
+	.container-card {
+		height: 500px; /* Dostosuj wysokość kart */
+	}
+	.opinion-group {
+		flex-direction: row; /* Jedna opinia pod drugą na małych ekranach */
+		gap: 15px;
+	}
+	.opinion-box {
+		width: 48%;
+	}
 }
