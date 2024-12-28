@@ -20,6 +20,23 @@ body {
 a {
 	color: black;
 }
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+	margin: 0.7em;
+}
+h1 {
+	font-size: 1.6rem;
+}
+h2 {
+	font-size: 1.3rem;
+}
+h3 {
+	font-size: 1rem;
+}
 /*header*/
 
 /*animacja płynący tekst*/
@@ -59,7 +76,6 @@ a {
 }
 
 .contact-header h3 {
-	font-size: 1rem;
 	margin-bottom: 0.5em;
 }
 
@@ -187,18 +203,11 @@ section {
 	margin: 1em 0;
 }
 
-.main-title {
-	font-size: 1.6rem;
-}
-
-.subheading {
-	font-size: 1.3rem;
-}
-
 .intro-text,
 .product-description,
 .offer-description,
-.container-options {
+.container-options,
+.client-opinion {
 	font-size: 0.8rem;
 }
 
@@ -265,7 +274,6 @@ section {
 .container-card h2 {
 	font-size: 1.1rem;
 	margin: 10px 0;
-	font-weight: bold;
 }
 
 .container-card p {
@@ -304,4 +312,29 @@ section {
 	background: var(--grey);
 	border: 1px solid var(--grey);
 	color: var(--white);
+}
+
+/*opinion*/
+
+.opinion {
+	text-align: center;
+}
+.opinion-box {
+	margin: 0.9em;
+}
+
+.opinion-box:nth-child(even) {
+	border-bottom: 1px solid var(--navy);
+}
+
+.opinion-box i {
+	font-size: 2.3rem;
+	margin-bottom: 0.5em;
+}
+.client-name {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.client-opinion {
+	margin-bottom: 1.5em;
 }
