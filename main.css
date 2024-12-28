@@ -26,13 +26,14 @@ h2,
 h3,
 h4 {
 	font-weight: bold;
-	margin: 0.7em;
+	margin: 0.7em 0;
 }
 h1 {
 	font-size: 1.6rem;
 }
 h2 {
 	font-size: 1.3rem;
+	text-align: center;
 }
 h3 {
 	font-size: 1rem;
@@ -192,7 +193,8 @@ h3 {
 	object-fit: cover;
 }
 /* main page first section about company*/
-section {
+section,
+footer {
 	padding: 10px 30px;
 	line-height: 1.5;
 }
@@ -207,7 +209,8 @@ section {
 .product-description,
 .offer-description,
 .container-options,
-.client-opinion {
+.client-opinion,
+.container-list {
 	font-size: 0.8rem;
 }
 
@@ -316,7 +319,8 @@ section {
 
 /*opinion*/
 
-.opinion {
+.opinion,
+.container-map-section .intro-text {
 	text-align: center;
 }
 .opinion-box {
@@ -334,7 +338,223 @@ section {
 .client-name {
 	font-size: 1.3rem;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 .client-opinion {
 	margin-bottom: 1.5em;
+}
+
+.container-map {
+	max-width: 100%;
+	height: auto;
+}
+
+.container-location {
+	list-style-type: none;
+}
+
+.description {
+	text-align: center;
+}
+
+.slider-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.slider {
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	height: 350px;
+	overflow: hidden;
+}
+
+.slider-box {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.slider-img {
+	width: 100%;
+	height: 350xp;
+	object-fit: cover;
+	object-position: center;
+}
+
+.btn {
+	position: absolute;
+	top: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	transform: translateY(-50%);
+	z-index: 10;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.slider:hover .btn {
+	opacity: 1;
+}
+
+.btn-left {
+	left: 0;
+}
+
+.btn-right {
+	right: 0;
+}
+
+.btn span {
+	font-size: 1.5rem;
+}
+
+.transport,
+.sales-description {
+	background: var(--navy);
+	color: var(--white);
+}
+
+.button {
+	width: 50%;
+	max-width: 200px;
+	padding: 10px;
+	background-color: var(--light-beige);
+	color: black;
+	border: 1px solid var(--light-beige);
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 0.7rem;
+	transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+	margin-top: 1em;
+}
+
+.button:hover {
+	background: var(--grey);
+	border: 1px solid var(--grey);
+	color: var(--white);
+}
+
+.transport img {
+	width: 100%;
+	margin: 1em 0;
+}
+
+.hero {
+	padding: 0;
+}
+
+.hero-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("./pawilony_zdjecia/kontenery-handlowe-2.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 40px;
+}
+
+.hero-image h2 {
+	margin: 0;
+	margin-bottom: 0.3em;
+}
+
+.hero-image .button {
+	margin-bottom: 0.5em;
+}
+
+.hero-text {
+	color: var(--white);
+	text-align: center;
+	border: 3px solid var(--beige);
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.about-description img {
+	width: 100%;
+	margin: 1em 0 0 0;
+}
+
+.contact-person {
+	font-size: 0.8rem;
+	margin-bottom: 1em;
+}
+
+.contact-person a {
+	text-decoration: none;
+	color: var(--beige);
+}
+
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: var(--light-beige);
+}
+
+.footer-nav ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+.footer-nav a {
+	text-decoration: none;
+	transition: color 0.3s;
+}
+.footer-nav li {
+	margin-bottom: 10px;
+	font-size: 0.8rem;
+}
+.footer-nav a:hover {
+	color: var(--grey);
+}
+.contact-info {
+	font-size: 0.9rem;
+}
+.address-info,
+.email-info,
+.phone-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 1em;
+}
+.address-info i,
+.email-info i,
+.phone-info i {
+	font-size: 2rem;
+}
+
+.icon-desc {
+	margin: 0.4em;
+	font-weight: bold;
+	font-size: 0.7rem;
+}
+
+.address-info a,
+.email-info a,
+.phone-info a {
+	text-decoration: none;
+	color: var(--navy);
+}
+
+.footer-info {
+	text-align: center;
+	font-size: 0.6rem;
 }
