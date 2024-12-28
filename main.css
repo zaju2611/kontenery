@@ -45,29 +45,34 @@ h3 {
 /*header*/
 
 /*animacja płynący tekst*/
-.text-wrapper {
+.stock-ticker {
+	font-size: 1rem;
 	display: flex;
-	justify-content: flex-start;
-	background: var(--navy);
+	gap: 2rem;
 	overflow: hidden;
-	position: relative;
-	padding: 0.3rem;
+	user-select: none;
+	--gap: 20px;
+	gap: var(--gap);
+	background: var(--navy);
 }
 
-.text-wrapper p {
-	font-size: 1rem;
-	color: white;
-	white-space: nowrap;
-	padding: 0 2rem;
-	animation: scroll-left 5s linear infinite;
+.stock-ticker ul {
+	padding: 0.3rem;
+	list-style: none;
+	flex-shrink: 0;
+	min-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+
+	color: var(--white);
+	animation: scroll-left 20s linear infinite;
 }
 
 @keyframes scroll-left {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-200%);
+	to {
+		transform: translateX(calc(-100% - var(--gap)));
 	}
 }
 
@@ -92,13 +97,14 @@ h3 {
 	margin: 0.3em;
 }
 
-/*nav section*/
+/*nav section mobile*/
 
 .nav-section {
 	position: relative;
 	background: var(--light-beige);
 	padding: 0.7em;
 }
+
 .logo-header {
 	display: none;
 }
@@ -144,10 +150,13 @@ h3 {
 }
 
 .nav-menu li {
+	text-align: center;
+
 	padding: 20px;
 }
 
 .nav-menu li a {
+	width: 250px;
 	text-decoration: none;
 	font-size: 0.8rem;
 }
@@ -175,16 +184,167 @@ h3 {
 	background-color: var(--navy);
 	color: white;
 	padding: 5px 20px;
-	width: 250px;
+
 	border-radius: 20px;
 	text-align: center;
 	display: inline-block;
 }
+.nav-menu li a.active i {
+	color: white;
+}
 .sub-menu {
 	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	padding: 10px 0;
+	list-style: none;
+	z-index: 1000;
+}
+
+.sub-menu li a {
+	display: block;
+	padding: 0px 20px;
+	color: #333;
+	text-decoration: none;
+}
+
+.sub-menu li a:hover {
+	background-color: var(--navy);
+}
+
+.menu-item .dropdown-toggle i {
+	transition: transform 0.3s ease;
+}
+
+.menu-item.active .dropdown-toggle i {
+	transform: rotate(-90deg);
+}
+
+.menu-item.active .sub-menu {
+	display: block;
 }
 .menu-item {
 	position: relative;
+}
+.menu-item a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #333;
+	padding: 0.5rem 1rem;
+	position: relative;
+}
+
+.menu-item i {
+	position: absolute;
+	right: 10px;
+	font-size: 1rem;
+	color: #333;
+}
+
+/* =========== DESKTOP NAV =============== */
+.desktop-nav {
+	display: none;
+	background-color: var(--light-beige);
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu > li {
+	position: relative;
+	flex: 1;
+	text-align: center;
+}
+
+.menu > li a {
+	display: block;
+	padding: 15px 10px;
+	color: black;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+/* Styl na główną kategorię */
+.menu > li:hover > a, /* podświetlenie głównej kategorii przy najedzeniu */
+.menu > li.active > a {
+	/* zachowanie podświetlenia po wejściu w podkategorię */
+	background-color: var(--grey);
+	color: var(--white);
+}
+
+.menu > li a:hover {
+	background-color: var(--grey);
+	color: var(--white);
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -8%;
+	background-color: var(--grey);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	min-width: 200px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+	font-size: 0.8rem;
+}
+
+.submenu li a {
+	padding: 10px 15px;
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+.submenu li a:hover {
+	background-color: var(--navy);
+}
+
+.menu > li:hover .submenu {
+	display: block;
+	animation: slideup 0.3s ease;
+}
+
+/* Dodanie klasy aktywnej na głównym elemencie */
+.menu > li:hover {
+	cursor: pointer;
+}
+
+.menu > li:hover .submenu {
+	display: block;
+	animation: slideup 0.3s ease;
+}
+
+.menu > li.active .submenu {
+	display: block;
+	animation: slideup 0.3s ease;
+}
+
+/* Styl aktywnego elementu */
+.menu > li.active > a {
+	background-color: var(--grey);
+	color: var(--white);
+}
+
+@keyframes slideup {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 .image-section {
@@ -210,6 +370,9 @@ footer {
 	margin: 1em 0;
 }
 
+.subheading {
+	text-align: left;
+}
 .intro-text,
 .product-description,
 .offer-description,
@@ -503,6 +666,7 @@ footer {
 		url("./pawilony_zdjecia/kontenery-handlowe-2.webp");
 	background-position: center;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
 	height: 300px;
 	display: flex;
@@ -610,7 +774,7 @@ footer {
 	font-size: 0.6rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 910px) {
 	h1 {
 		font-size: 2rem;
 	}
@@ -779,5 +943,12 @@ footer {
 		margin: 0.7em 0;
 		justify-content: space-between;
 		font-size: 0.8rem;
+	}
+
+	.nav-section {
+		display: none;
+	}
+	.desktop-nav {
+		display: block;
 	}
 }
