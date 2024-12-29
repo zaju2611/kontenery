@@ -356,6 +356,10 @@ strong {
 	color: var(--white);
 }
 
+.activeDesktop {
+	background: var(--beige);
+}
+
 @keyframes slideup {
 	0% {
 		opacity: 0;

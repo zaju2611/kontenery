@@ -73,18 +73,18 @@
                 </a>
 
                 <nav>
-                    <button class="burger-button icon">
+                    <button class="burger-button icon" aria-label="nawigacja">
                         <i class="fa-solid fa-bars "></i>
                     </button>
                     <ul class="nav-menu">
                         <li class="title-section">
                             <h3 class="nav-title">Menu główne</h3>
-                            <button class="close-menu icon">
+                            <button class="close-menu icon" aria-label="zamknij nawigacje">
                                 <i class="fa-solid fa-xmark "></i>
                             </button>
                         </li>
 
-                        <li><a href="#" class="active">Strona główna</a></li>
+                        <li><a href="/" class="active">Strona główna</a></li>
                         <li class="menu-item"><a href="#" class="dropdown-toggle">Oferta<i
                                     class="fa-solid fa-chevron-right"></i></a>
                             <ul class="sub-menu">
@@ -130,7 +130,7 @@
             <div class="wrapper">
                 <nav>
                     <ul class="menu">
-                        <li><a href="#">Strona główna</a></li>
+                        <li><a href="/">Strona główna</a></li>
                         <li>
                             <a href="#">Oferta</a>
                             <ul class="submenu">
@@ -222,45 +222,49 @@
                             wyposażenie kuchni.
                             Dzięki modułowej konstrukcji można stworzyć biuro lub zaplecze socjalne dopasowane do
                             potrzeb.</p>
-                        <button>Czytaj więcej</button>
+                        <button aria-label="Czytaj więcej"
+                            onclick="window.location.href='/oferta/kontenery-mieszkalne.html';">Czytaj więcej</button>
                     </div>
 
                 </div>
                 <div class="container-card">
-                    <img src="./pawilony_zdjecia/offer-main-g-2.webp" alt="pawilon mieszkalny" loading="lazy" />
+                    <img src="./pawilony_zdjecia/offer-main-g-2.webp" alt="pawilon socjalny" loading="lazy" />
                     <div class="card-text">
                         <h2>Kontenery Socjalne</h2>
                         <p>Dzięki elastyczności łączenia kontenerów, możemy stworzyć przestronną powierzchnię biurową
                             oraz
                             zaplecze szatniowo-socjalne, idealnie dopasowane do wymagań Twojego zespołu.</p>
-                        <button>Czytaj więcej</button>
+                        <button aria-label="Czytaj więcej"
+                            onclick="window.location.href='/oferta/kontenery-socjalne.html';">Czytaj więcej</button>
                     </div>
 
                 </div>
                 <div class="container-card">
-                    <img src="./pawilony_zdjecia/offer-main-g-3.webp" alt="pawilon mieszkalny" loading="lazy" />
+                    <img src="./pawilony_zdjecia/offer-main-g-3.webp" alt="pawilon handlowy" loading="lazy" />
                     <div class="card-text">
                         <h2>Kontenery Handlowe</h2>
                         <p>Kontenery handlowe z nowoczesnym designem można dostosować do potrzeb jako punkt sprzedaży,
                             pawilon lub biuro, w zależności od potrzeb klienta</p>
-                        <button>Czytaj więcej</button>
+                        <button aria-label="Czytaj więcej"
+                            onclick="window.location.href='/oferta/kontenery-handlowe.html';">Czytaj więcej</button>
                     </div>
 
                 </div>
                 <div class="container-card">
-                    <img src="./pawilony_zdjecia/offer-main-g-4.webp" alt="pawilon mieszkalny" loading="lazy" />
+                    <img src="./pawilony_zdjecia/offer-main-g-4.webp" alt="pawilon budowlany" loading="lazy" />
                     <div class="card-text">
                         <h2>Kontenery Budowlane</h2>
                         <p>
                             Jako producent kontenerów budowlanych, oferujemy rozwiązania dostosowane do indywidualnych
                             potrzeb Klienta, w tym produkcję kontenerów w niestandardowych rozmiarach oraz z
                             wyposażeniem zgodnym z wymaganiami.</p>
-                        <button>Czytaj więcej</button>
+                        <button aria-label="Czytaj więcej"
+                            onclick="window.location.href='/oferta/kontenery-budowlane.html';">Czytaj więcej</button>
                     </div>
 
                 </div>
                 <div class="container-card">
-                    <img src="./pawilony_zdjecia/offer-main-g-5.webp" alt="pawilon mieszkalny" loading="lazy" />
+                    <img src="./pawilony_zdjecia/offer-main-g-5.webp" alt="pawilon sklepowy" loading="lazy" />
                     <div class="card-text">
                         <h2>Kontenery Sklepowe</h2>
                         <p>Producent oferuje kontenery w niemal dowolnych wymiarach, dostosowane do indywidualnych
@@ -268,17 +272,19 @@
                             Klienta. Układ pomieszczeń oraz konfiguracja wyposażenia są ustalane na podstawie
                             specyficznych
                             potrzeb użytkowników.</p>
-                        <button>Czytaj więcej</button>
+                        <button aria-label="Czytaj więcej"
+                            onclick="window.location.href='/oferta/kontenery-sklepowe.html';">Czytaj więcej</button>
                     </div>
 
                 </div>
                 <div class="container-card">
-                    <img src="./pawilony_zdjecia/offer-main-g.webp" alt="pawilon mieszkalny" loading="lazy" />
+                    <img src="./pawilony_zdjecia/offer-main-g.webp" alt="pawilon magazynowy" loading="lazy" />
                     <div class="card-text">
                         <h2>Kontenery Magazynowe</h2>
                         <p>Dzięki doskonałej jakości wykonania, funkcjonalności oraz łatwości transportu, kontenery te
                             idealnie nadają się do wykorzystania jako magazyny zarówno stałe, jak i tymczasowe.</p>
-                        <button>Czytaj więcej</button>
+                        <button aria-label="Czytaj więcej"
+                            onclick="window.location.href='/oferta/kontenery-magazynowe.html';">Czytaj więcej</button>
                     </div>
 
                 </div>
@@ -446,8 +452,8 @@
                             <img src="./pawilony_zdjecia/slider/realizacje-021.webp" alt="Zdjęcie kontenera"
                                 class="slider-img">
                         </div>
-                        <button class="btn btn-left"><span>&lt;</span></button>
-                        <button class="btn btn-right"><span>&gt;</span></button>
+                        <button class="btn btn-left" aria-label="następne zdjęcie"><span>&lt;</span></button>
+                        <button class="btn btn-right" aria-label="poprzednie zdjęcie"><span>&gt;</span></button>
                     </div>
 
 
@@ -488,7 +494,7 @@
                                 Skontaktuj
                                 się z nami, aby uzyskać więcej informacji o naszych usługach.</p>
                         </div>
-                        <button class="button">
+                        <button class="button" aria-label="Dowiedz się więcej">
                             Dowiedz się więcej
                         </button>
                     </div>
@@ -507,7 +513,7 @@
                                 dla
                                 Twojej firmy. Dołącz do
                                 grona naszych zadowolonych klientów!</p>
-                            <button class="button">Dowiedz się więcej</button>
+                            <button class="button" aria-label="Dowiedz się więcej">Dowiedz się więcej</button>
                         </div>
 
                     </div>
@@ -606,8 +612,8 @@
         </div>
     </footer>
 
-    <script src="./nav.js"></script>
-    <script src="./slider.js"></script>
+    <script src="./nav.js" async></script>
+    <script src="./slider.js" async></script>
 </body>
 
 </html>

@@ -2,6 +2,8 @@ const burgerButton = document.querySelector(".burger-button");
 const navMenu = document.querySelector(".nav-menu");
 const closeButton = document.querySelector(".close-menu");
 const menuItems = document.querySelectorAll(".nav-menu li a");
+const menuItemsDesktop = document.querySelectorAll(".desktop-nav .menu a");
+const currentPath = window.location.pathname;
 
 burgerButton.addEventListener("click", () => {
 	burgerButton.classList.toggle("open");
@@ -13,11 +15,28 @@ closeButton.addEventListener("click", () => {
 });
 
 menuItems.forEach((item) => {
-	item.addEventListener("click", function () {
+	if (currentPath === item.getAttribute("href")) {
 		menuItems.forEach((link) => link.classList.remove("active"));
+		item.classList.add("active");
+	}
+});
 
-		this.classList.add("active");
-	});
+menuItemsDesktop.forEach((item) => {
+	if (currentPath === item.getAttribute("href")) {
+		menuItemsDesktop.forEach((link) =>
+			link.closest("li").classList.remove("activeDesktop")
+		);
+
+		const parentLi = item.closest("li");
+		if (parentLi) {
+			parentLi.classList.add("activeDesktop");
+
+			const parentMenu = parentLi.closest(".menu > li");
+			if (parentMenu) {
+				parentMenu.classList.add("activeDesktop");
+			}
+		}
+	}
 });
 
 const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
