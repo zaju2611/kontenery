@@ -1,33 +1,30 @@
-const sliderBox = document.querySelector(".slider-box");
-const sliderImages = document.querySelectorAll(".slider-img");
-const leftButton = document.querySelector(".btn-left");
-const rightButton = document.querySelector(".btn-right");
+let currentIndex = 0; // Indeks bieżącego obrazu
+const sliderBox = document.querySelector(".slider-box"); // Kontener dla obrazków
+const images = document.querySelectorAll(".slider-img"); // Wszystkie obrazki w sliderze
+const totalImages = images.length; // Łączna liczba obrazów
 
-let currentIndex = 0;
-const totalImages = sliderImages.length;
-
-function moveToRight() {
-	if (currentIndex < totalImages - 1) {
-		currentIndex++;
-	} else {
-		currentIndex = 0;
-	}
-	updateSliderPosition();
+// Funkcja do aktualizacji pozycji slidera
+function updateSliderPosition() {
+	const offset = -currentIndex * 100; // Przesunięcie o 100% dla każdego obrazu
+	sliderBox.style.transform = `translateX(${offset}%)`; // Ustawienie przemieszczenia
 }
 
-function moveToLeft() {
+// Funkcja do przechodzenia do poprzedniego obrazu
+document.querySelector(".btn-left").addEventListener("click", () => {
 	if (currentIndex > 0) {
 		currentIndex--;
 	} else {
-		currentIndex = totalImages - 1;
+		currentIndex = totalImages - 1; // Jeśli na początku, przejdź na ostatni obraz
 	}
 	updateSliderPosition();
-}
+});
 
-function updateSliderPosition() {
-	const offset = -currentIndex * 100;
-	sliderBox.style.transform = `translateX(${offset}%)`;
-}
-
-leftButton.addEventListener("click", moveToLeft);
-rightButton.addEventListener("click", moveToRight);
+// Funkcja do przechodzenia do następnego obrazu
+document.querySelector(".btn-right").addEventListener("click", () => {
+	if (currentIndex < totalImages - 1) {
+		currentIndex++;
+	} else {
+		currentIndex = 0; // Jeśli na końcu, przejdź na pierwszy obraz
+	}
+	updateSliderPosition();
+});
