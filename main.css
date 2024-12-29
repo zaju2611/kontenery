@@ -932,6 +932,67 @@ footer {
 .size-list li {
 	margin: 0.3em;
 }
+
+/* ========================= COLOR PAGE ================== */
+.color-box-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+}
+
+.color-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: calc(33.33% - 1rem);
+	max-width: 250px;
+	min-width: 200px;
+}
+
+.color {
+	width: 100%;
+	aspect-ratio: 1;
+}
+
+.color-box p {
+	font-weight: bold;
+	font-size: 1rem;
+	margin: 0.5em;
+}
+
+#ral-1015 {
+	background: rgb(231, 210, 179);
+}
+#ral-3000 {
+	background: rgb(167, 41, 32);
+}
+#ral-5003 {
+	background: rgb(31, 56, 85);
+}
+#ral-5010 {
+	background: rgb(0, 80, 125);
+}
+#ral-6011 {
+	background: rgb(108, 124, 89);
+}
+#ral-7024 {
+	background: rgb(69, 73, 78);
+}
+
+#ral-7035 {
+	background: rgb(197, 200, 196);
+}
+#ral-9006 {
+	background: rgb(160, 162, 158);
+}
+#ral-9007 {
+	background: rgb(134, 131, 126);
+}
+#ral-9010 {
+	background: rgb(241, 236, 225);
+}
 /*============== BREADCRUMB =================*/
 .breadcrumb-container {
 	padding: 20px 30px 0 30px;
@@ -964,6 +1025,7 @@ footer {
 .breadcrumb span:last-child:after {
 	content: "";
 }
+
 /*====================== DESKTOP VERSION ===================*/
 @media (min-width: 992px) {
 	body {
