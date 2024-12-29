@@ -56,6 +56,15 @@ strong {
 	font-weight: bold;
 }
 
+.left-header {
+	text-align: left;
+	align-self: flex-start;
+}
+
+.center-header {
+	text-align: center;
+}
+
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -891,10 +900,6 @@ footer {
 	width: 100%;
 }
 
-.subpage h2,
-.subpage h3 {
-	text-align: center;
-}
 .subpage h4 {
 	font-size: 0.9rem;
 }
@@ -905,12 +910,12 @@ footer {
 }
 
 .nested-list {
-	margin-left: 20px; /* Wcięcie listy o 20px */
-	list-style-type: none; /* Usunięcie punktów z listy */
+	margin-left: 20px;
+	list-style-type: none;
 }
 
 .nested-list li {
-	margin-bottom: 5px; /* Dodatkowy odstęp między elementami listy */
+	margin-bottom: 5px;
 }
 
 .size-list {
@@ -922,6 +927,38 @@ footer {
 }
 .size-list li {
 	margin: 0.3em;
+}
+/*============== BREADCRUMB =================*/
+.breadcrumb-container {
+	padding: 20px 30px 0 30px;
+	font-size: 0.7rem;
+}
+
+.breadcrumb {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.breadcrumb span {
+	margin-right: 10px;
+	line-height: 25px;
+	height: 25%;
+}
+
+.breadcrumb span:hover {
+	text-decoration: none;
+}
+
+.breadcrumb span:after {
+	content: "/";
+
+	margin-left: 10px;
+}
+
+.breadcrumb span:last-child:after {
+	content: "";
 }
 /*====================== DESKTOP VERSION ===================*/
 @media (min-width: 992px) {
@@ -1132,6 +1169,9 @@ footer {
 		flex-direction: row;
 		justify-content: flex-start;
 		gap: 200px;
+	}
+	.breadcrumb-container {
+		font-size: 0.9rem;
 	}
 }
 
