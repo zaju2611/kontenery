@@ -1,6 +1,6 @@
 :root {
 	--white: #fff;
-	--navy: #213555;
+	--navy: #0e2549;
 	--grey: #3e5879;
 	--beige: #d8c4b6;
 	--light-beige: #f1f1f1;
@@ -16,9 +16,19 @@
 
 body {
 	position: relative;
+	font-size: 0.8rem;
 }
+
+button {
+	font-size: 0.7rem;
+}
+
 a {
 	color: black;
+}
+
+ul {
+	list-style: none;
 }
 
 h1,
@@ -37,14 +47,21 @@ h2 {
 h3 {
 	font-size: 1rem;
 }
+section,
+footer {
+	padding: 10px 30px;
+	line-height: 1.5;
+}
+strong {
+	font-weight: bold;
+}
 
 .wrapper {
-	max-width: 1200px; /* Maksymalna szerokość */
-	margin: 0 auto; /* Wyśrodkowanie poziome */
+	max-width: 1200px;
+	margin: 0 auto;
 }
-/*header*/
+/*================= HEADER ===================*/
 
-/*animacja płynący tekst*/
 .stock-ticker {
 	font-size: 1rem;
 	display: flex;
@@ -58,7 +75,7 @@ h3 {
 
 .stock-ticker ul {
 	padding: 0.3rem;
-	list-style: none;
+
 	flex-shrink: 0;
 	min-width: 100%;
 	display: flex;
@@ -76,7 +93,7 @@ h3 {
 	}
 }
 
-/* contact section */
+/*===================== CONTACT DATA ===================== */
 .contact-data {
 	display: flex;
 	justify-content: center;
@@ -97,7 +114,7 @@ h3 {
 	margin: 0.3em;
 }
 
-/*nav section mobile*/
+/*===================== MOBILE NAV =========================*/
 
 .nav-section {
 	position: relative;
@@ -133,7 +150,7 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	top: 0;
-	left: -2000px;
+	left: -1000px;
 	height: 100%;
 	width: 100%;
 	background: var(--white);
@@ -141,7 +158,7 @@ h3 {
 	transition: left 0.6s ease-in-out;
 	box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
 	z-index: 1001;
-	list-style: none;
+
 	padding: 0;
 }
 
@@ -153,12 +170,6 @@ h3 {
 	text-align: center;
 
 	padding: 20px;
-}
-
-.nav-menu li a {
-	width: 250px;
-	text-decoration: none;
-	font-size: 0.8rem;
 }
 
 .title-section {
@@ -184,12 +195,12 @@ h3 {
 	background-color: var(--navy);
 	color: white;
 	padding: 5px 20px;
-
 	border-radius: 20px;
 	text-align: center;
 	display: inline-block;
 }
-.nav-menu li a.active i {
+.nav-menu li a.active i,
+.nav-menu li a:hover i {
 	color: white;
 }
 .sub-menu {
@@ -199,19 +210,24 @@ h3 {
 	left: 0;
 	background-color: #fff;
 	padding: 10px 0;
-	list-style: none;
+
 	z-index: 1000;
 }
 
-.sub-menu li a {
+.sub-menu li a,
+.nav-menu li a {
+	width: 250px;
 	display: block;
-	padding: 0px 20px;
+	padding: 5px 20px;
 	color: #333;
 	text-decoration: none;
 }
 
-.sub-menu li a:hover {
+.sub-menu li a:hover,
+.nav-menu li a:hover {
 	background-color: var(--navy);
+	color: var(--white);
+	border-radius: 15px;
 }
 
 .menu-item .dropdown-toggle i {
@@ -245,7 +261,7 @@ h3 {
 	color: #333;
 }
 
-/* =========== DESKTOP NAV =============== */
+/* ================== DESKTOP NAV =============== */
 .desktop-nav {
 	display: none;
 	background-color: var(--light-beige);
@@ -253,7 +269,7 @@ h3 {
 
 .menu {
 	display: flex;
-	list-style: none;
+
 	padding: 0;
 	margin: 0;
 }
@@ -272,10 +288,8 @@ h3 {
 	transition: background-color 0.3s;
 }
 
-/* Styl na główną kategorię */
-.menu > li:hover > a, /* podświetlenie głównej kategorii przy najedzeniu */
+.menu > li:hover > a,
 .menu > li.active > a {
-	/* zachowanie podświetlenia po wejściu w podkategorię */
 	background-color: var(--grey);
 	color: var(--white);
 }
@@ -291,12 +305,11 @@ h3 {
 	top: 100%;
 	left: -8%;
 	background-color: var(--grey);
-	list-style: none;
+
 	padding: 0;
 	margin: 0;
 	min-width: 200px;
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-	font-size: 0.8rem;
 }
 
 .submenu li a {
@@ -315,7 +328,6 @@ h3 {
 	animation: slideup 0.3s ease;
 }
 
-/* Dodanie klasy aktywnej na głównym elemencie */
 .menu > li:hover {
 	cursor: pointer;
 }
@@ -330,7 +342,6 @@ h3 {
 	animation: slideup 0.3s ease;
 }
 
-/* Styl aktywnego elementu */
 .menu > li.active > a {
 	background-color: var(--grey);
 	color: var(--white);
@@ -347,6 +358,8 @@ h3 {
 	}
 }
 
+/* ====================== IMAGE HEADER ================== */
+
 .image-section {
 	background: var(--navy);
 	height: 200px;
@@ -357,12 +370,7 @@ h3 {
 	height: 95%;
 	object-fit: cover;
 }
-/* main page first section about company*/
-section,
-footer {
-	padding: 10px 30px;
-	line-height: 1.5;
-}
+/*====================== MAIN PAGE PREMIUM =====================*/
 
 .main-title,
 .subheading {
@@ -372,19 +380,6 @@ footer {
 
 .subheading {
 	text-align: left;
-}
-.intro-text,
-.product-description,
-.offer-description,
-.container-options,
-.client-opinion,
-.container-list {
-	font-size: 0.8rem;
-}
-
-.product-list {
-	list-style-type: none;
-	font-size: 0.8rem;
 }
 
 .product-list li {
@@ -398,6 +393,8 @@ footer {
 	display: block;
 }
 
+/*===================== CARDS CONTAINER ==============*/
+
 .containers-cards {
 	display: flex;
 	flex-wrap: wrap;
@@ -405,7 +402,6 @@ footer {
 	gap: 15px;
 }
 
-/*container card*/
 .container-card {
 	position: relative;
 	width: 100%;
@@ -429,7 +425,7 @@ footer {
 .container-card img {
 	width: 100%;
 	height: 50%;
-	object-fit: cover; /* Obraz wypełnia kontener */
+	object-fit: cover;
 	object-position: center center;
 	transition: transform 0.8s ease;
 }
@@ -442,11 +438,10 @@ footer {
 	padding: 10px 20px;
 }
 .container-card h2 {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 }
 
 .container-card p {
-	font-size: 0.8rem;
 	margin: 0 0 10px 0;
 }
 
@@ -461,7 +456,7 @@ footer {
 	border: 1px solid var(--white);
 	border-radius: 25px;
 	cursor: pointer;
-	font-size: 0.7rem;
+
 	transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 	margin-top: 1em;
 }
@@ -485,7 +480,7 @@ footer {
 	color: var(--white);
 }
 
-/*opinion*/
+/*===================== OPINION SECTION ==================*/
 
 .opinion,
 .container-map-section .intro-text {
@@ -501,13 +496,13 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-bottom: 1px solid var(--navy); /* Kreska pod grupą */
+	border-bottom: 1px solid var(--navy);
 	padding: 15px 0;
 	margin: 15px 0;
 }
 
 .opinion-box {
-	width: 100%; /* Szerokość każdej opinii */
+	width: 100%;
 	text-align: center;
 	padding: 10px;
 	box-sizing: border-box;
@@ -527,6 +522,8 @@ footer {
 .client-opinion {
 	margin-bottom: 1.5em;
 }
+
+/*========================= SECTION WITH MAP ===================*/
 .container-map-section {
 	display: flex;
 	justify-content: center;
@@ -543,13 +540,11 @@ footer {
 	padding-left: 20px;
 }
 
-.container-location {
-	list-style-type: none;
-}
-
 .description {
 	text-align: center;
 }
+
+/*========================= SLIDER SECTION =====================*/
 
 .slider-section {
 	display: flex;
@@ -615,6 +610,8 @@ footer {
 	background: var(--light-beige);
 }
 
+/*======================== TRANSPORT SECTION ====================*/
+
 .transport-section,
 .sales-description {
 	background: var(--navy);
@@ -630,7 +627,7 @@ footer {
 	border: 1px solid var(--light-beige);
 	border-radius: 25px;
 	cursor: pointer;
-	font-size: 0.7rem;
+
 	transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 	margin-top: 1em;
 }
@@ -656,6 +653,8 @@ footer {
 	width: 100%;
 	margin: 1em 0;
 }
+
+/*========================== HERO IMAGE SECTION ==================*/
 
 .hero {
 	padding: 0;
@@ -692,6 +691,8 @@ footer {
 	border-radius: 15px;
 	padding: 10px;
 }
+
+/*======================= SPECJALIST SECTION ===================*/
 .specjalist-contact img {
 	width: 100%;
 	margin: 1em 0 0 0;
@@ -702,7 +703,6 @@ footer {
 	text-align: left;
 }
 .contact-person {
-	font-size: 0.8rem;
 	margin-bottom: 1em;
 }
 
@@ -711,6 +711,7 @@ footer {
 	color: var(--beige);
 }
 
+/*===================== FOOTER SECTION ==========================*/
 footer {
 	background: var(--light-beige);
 }
@@ -723,7 +724,6 @@ footer {
 }
 
 .footer-nav ul {
-	list-style-type: none;
 	text-align: center;
 }
 
@@ -733,7 +733,6 @@ footer {
 }
 .footer-nav li {
 	margin-bottom: 10px;
-	font-size: 0.8rem;
 }
 .footer-nav a:hover {
 	color: var(--beige);
@@ -759,7 +758,6 @@ footer {
 .icon-desc {
 	margin: 0.4em;
 	font-weight: bold;
-	font-size: 0.7rem;
 }
 
 .address-info a,
@@ -774,7 +772,128 @@ footer {
 	font-size: 0.6rem;
 }
 
+/*=========================================================*/
+/*=======================GALLERY==================*/
+/*=========================================================*/
+
+.img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-flow: dense;
+}
+
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+.modal-nav {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+
+.modal-nav-btn {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	font-size: 2rem;
+	padding: 10px;
+	cursor: pointer;
+	opacity: 0.5;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#prev-btn {
+	left: 0px;
+}
+
+#next-btn {
+	right: 0px;
+}
+
+.modal-nav-btn:hover {
+	opacity: 1;
+}
+
+.close-btn {
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	font-size: 3rem;
+	color: black;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.close-btn:hover {
+	color: var(--beige);
+}
+/*=========================================================*/
+/*=========================================================*/
+/*=========================================================*/
+
+/*====================== SUBPAGE ========================*/
+.subpage-img {
+	width: 100%;
+}
+
+/*====================== DESKTOP VERSION ===================*/
 @media (min-width: 910px) {
+	body {
+		font-size: 1rem;
+	}
 	h1 {
 		font-size: 2rem;
 	}
@@ -786,15 +905,7 @@ footer {
 		font-size: 1.3rem;
 	}
 
-	.intro-text,
-	.product-description,
-	.offer-description,
-	.container-options,
-	.client-opinion,
-	.container-list {
-		font-size: 1rem;
-	}
-
+	/*==================== HEADER ===================*/
 	.contact-header {
 		display: flex;
 		flex-direction: row;
@@ -817,6 +928,14 @@ footer {
 	.image-section {
 		height: 600px;
 	}
+	/*===================== NAV ================== */
+	.nav-section {
+		display: none;
+	}
+	.desktop-nav {
+		display: block;
+	}
+	/*======================= MAIN PAGE ================*/
 	.about {
 		display: flex;
 		justify-content: center;
@@ -833,8 +952,10 @@ footer {
 	.container-image {
 		max-width: 700px;
 		max-height: 700px;
-		width: 70%;
+		width: 50%;
 	}
+
+	/*======================= CARDS CONTAINER ================*/
 	.containers-cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -843,7 +964,9 @@ footer {
 
 	.container-card {
 		height: 500px;
+		font-size: 0.8rem;
 	}
+	/*======================== OPINION SECTION ================*/
 	.opinion-group {
 		flex-direction: row;
 		gap: 15px;
@@ -851,7 +974,7 @@ footer {
 	.opinion-box {
 		width: 48%;
 	}
-
+	/*======================== MAP SECTION =====================*/
 	.container-map-section {
 		flex-direction: row;
 		text-align: left;
@@ -868,7 +991,7 @@ footer {
 		max-width: 50%;
 		padding-left: 20px;
 	}
-
+	/*======================== TRANSPORT SECTION ====================*/
 	.transport {
 		flex-direction: row;
 	}
@@ -884,6 +1007,7 @@ footer {
 	.button {
 		margin: 2em 0;
 	}
+	/*======================= HERO IMAGE SECTION =====================*/
 	.hero-image {
 		height: 400px;
 	}
@@ -900,6 +1024,7 @@ footer {
 	.hero-text h2 {
 		width: 30%;
 	}
+	/*========================= SPECJALIST SECTION =====================*/
 	.about-description,
 	.specjalist-contact {
 		margin: 30px 0;
@@ -913,6 +1038,7 @@ footer {
 	.specjalist-contact img {
 		width: 60%;
 	}
+	/*=========================== FOOTER =========================*/
 	.footer-nav {
 		width: 100%;
 	}
@@ -944,11 +1070,9 @@ footer {
 		justify-content: space-between;
 		font-size: 0.8rem;
 	}
-
-	.nav-section {
-		display: none;
-	}
-	.desktop-nav {
-		display: block;
+	/*====================== IMAGE GALLERY ======================== */
+	.modal-content {
+		width: 65%;
+		max-width: 75%;
 	}
 }
