@@ -902,6 +902,7 @@ footer {
 /*====================== SUBPAGE ========================*/
 .subpage-img {
 	width: 100%;
+	margin-bottom: 1em;
 }
 
 .subpage h4 {
@@ -1228,8 +1229,9 @@ footer {
 		margin-bottom: 1em;
 	}
 	.subpage-img {
-		width: 48%;
+		width: 45%;
 		margin-right: 2em;
+		margin-bottom: 0;
 	}
 
 	.size-list {
