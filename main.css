@@ -912,8 +912,19 @@ footer {
 .nested-list li {
 	margin-bottom: 5px; /* Dodatkowy odstęp między elementami listy */
 }
+
+.size-list {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 10px;
+}
+.size-list li {
+	margin: 0.3em;
+}
 /*====================== DESKTOP VERSION ===================*/
-@media (min-width: 910px) {
+@media (min-width: 992px) {
 	body {
 		font-size: 0.9rem;
 	}
@@ -1114,6 +1125,18 @@ footer {
 	}
 	.subpage-img {
 		width: 48%;
-		margin-right: 1em;
+		margin-right: 2em;
+	}
+
+	.size-list {
+		flex-direction: row;
+		justify-content: flex-start;
+		gap: 200px;
+	}
+}
+
+@media (min-width: 526px) {
+	.modal-img {
+		max-width: 70%;
 	}
 }
