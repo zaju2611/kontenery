@@ -34,7 +34,8 @@ ul {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
 	font-weight: bold;
 	margin: 0.7em 0;
 }
@@ -46,6 +47,12 @@ h2 {
 }
 h3 {
 	font-size: 1rem;
+}
+h4 {
+	font-size: 0.85rem;
+}
+h5 {
+	font-size: 0.75rem;
 }
 section,
 footer {
@@ -947,6 +954,14 @@ footer {
 
 .subpage section:last-of-type {
 	margin-bottom: 1.5em;
+}
+
+ol ol {
+	margin-top: 0.5em;
+	padding-left: 2em;
+}
+ol ol li {
+	padding-left: 0.5em;
 }
 
 /* ========================= COLOR PAGE ================== */
