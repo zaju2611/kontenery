@@ -70,6 +70,7 @@ strong {
 
 .center-header {
 	text-align: center;
+	align-self: center;
 }
 
 .wrapper {
@@ -1024,6 +1025,31 @@ ol ol li {
 #ral-9010 {
 	background: rgb(241, 236, 225);
 }
+
+/*============== ADDITIONS ==================*/
+
+.image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.image-container-item {
+	width: 100%;
+	max-width: 375px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	margin-bottom: 0.5em;
+}
+.image-container-item img {
+	width: 100%;
+	max-width: 350px;
+}
+
 /*============== BREADCRUMB =================*/
 .breadcrumb-container {
 	padding: 20px 30px 0 30px;
