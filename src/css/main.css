@@ -1050,6 +1050,40 @@ ol ol li {
 	max-width: 350px;
 }
 
+/*============== REALIZATIONS =================*/
+
+.realizations {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.realization {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 350px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+.main-img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.main-img:hover {
+	cursor: pointer;
+}
+
+.realization img {
+	width: 100%;
+	height: auto;
+}
+
 /*============== BREADCRUMB =================*/
 .breadcrumb-container {
 	padding: 20px 30px 0 30px;
@@ -1233,6 +1267,10 @@ ol ol li {
 	.specjalist-contact img {
 		width: 60%;
 	}
+	/*=========================== REALIZATIONS =========================*/
+	.realization {
+		max-width: 350px;
+	}
 	/*=========================== FOOTER =========================*/
 	.footer-nav {
 		width: 100%;
@@ -1312,6 +1350,9 @@ ol ol li {
 	.grid-wrapper {
 		grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
 		grid-auto-rows: 175px;
+	}
+	.realization {
+		max-width: 300px;
 	}
 }
 @media (min-width: 420px) {
