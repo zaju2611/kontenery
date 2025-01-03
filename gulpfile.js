@@ -75,7 +75,7 @@ function watchForChanges(done) {
 		"change",
 		reload
 	);
-	watch(paths.css, css).on("change", reload);
+	watch(paths.css, series(css)).on("change", reload);
 	watch(paths.img, convertImages).on("change", reload);
 	done();
 }
