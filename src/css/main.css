@@ -190,7 +190,7 @@ strong {
 .nav-menu li {
 	text-align: center;
 
-	padding: 20px;
+	padding: 15px 20px;
 }
 
 .title-section {
@@ -416,6 +416,10 @@ strong {
 	max-width: 500px;
 	margin: 1em auto;
 	display: block;
+}
+.navy-section {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 /*===================== CARDS CONTAINER ==============*/
@@ -650,7 +654,8 @@ strong {
 /*======================== TRANSPORT SECTION ====================*/
 
 .transport-section,
-.sales-description {
+.sales-description,
+.navy-section {
 	background: var(--navy);
 	color: var(--white);
 }
@@ -822,6 +827,13 @@ footer {
 .footer-info {
 	text-align: center;
 	font-size: 0.6rem;
+}
+
+.activeFooter {
+	color: var(--beige);
+	background: var(--navy);
+	border-radius: 20px;
+	padding: 5px 15px;
 }
 
 /*=========================================================*/
@@ -1009,8 +1021,10 @@ ol ol li {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
-
 	flex-wrap: wrap;
+}
+.question-box-item {
+	width: 100%;
 }
 
 /* ========================= COLOR PAGE ================== */
