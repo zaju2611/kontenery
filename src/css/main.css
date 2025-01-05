@@ -1,5 +1,5 @@
 :root {
-	--white: #eee;
+	--white: #fff;
 	--navy: #0e2549;
 	--grey: #3e5879;
 	--beige: #d8c4b6;
@@ -7,19 +7,19 @@
 }
 
 @font-face {
-	font-family: "Host Grotesk";
-	src: url("/dist/assets/fonts/HostGrotesk-Bold.ttf");
+	font-family: "Rubik";
+	src: url("/dist/assets/fonts/Rubik-ExtraBold.ttf");
 }
 @font-face {
-	font-family: "Host Grotesk";
-	src: url("/dist/assets/fonts/HostGrotesk-Light.ttf");
+	font-family: "Rubik";
+	src: url("/dist/assets/fonts/Rubik-Light.ttf");
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Host Grotesk", sans-serif;
+	font-family: "Rubik", sans-serif;
 	font-weight: 300;
 }
 
@@ -30,6 +30,7 @@ html {
 body {
 	position: relative;
 	font-size: 0.8rem;
+	background-color: var(--white);
 }
 
 button {
