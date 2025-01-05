@@ -1,36 +1,28 @@
-// Inicjalizacja EmailJS
-emailjs.init("gey-b1Y8gOJbQuPdL"); // Zastąp YOUR_USER_ID swoim ID użytkownika
+emailjs.init("gey-b1Y8gOJbQuPdL");
 
-// Funkcja do wysyłania formularza
 document
 	.querySelector(".contact-form")
 	.addEventListener("submit", function (event) {
-		event.preventDefault(); // Zapobiega domyślnemu wysyłaniu formularza
+		event.preventDefault();
 
-		// Przeprowadzamy walidację formularza
 		if (validateForm(event)) {
-			// Pobieranie danych z formularza
 			let form = event.target;
 			let formData = new FormData(form);
 
-			// Przekształcenie danych formularza na obiekt JSON
 			let formObject = {};
 			formData.forEach(function (value, key) {
 				formObject[key] = value;
 			});
 
-			// Sprawdzanie, czy zgoda została wyrażona
 			if (!formObject.consent) {
 				alert("Musisz wyrazić zgodę na przetwarzanie danych!");
 				return;
 			}
 
-			// Wysyłanie formularza przez EmailJS
 			emailjs.send("service_l5e2jt4", "template_2zxzxce", formObject).then(
 				function (response) {
 					console.log("Sukces:", response);
 
-					// Ukrycie formularza i wyświetlenie komunikatu
 					const formContainer = document.querySelector(
 						".contact-form-container"
 					);
@@ -49,7 +41,6 @@ document
 		}
 	});
 
-// Walidacja formularza
 const form = document.querySelector(".contact-form");
 const mainError = document.querySelector(".error-main");
 const errorMessages = document.querySelectorAll(".error");
@@ -61,9 +52,8 @@ function resetErrors() {
 		field.classList.remove("error-border");
 	});
 
-	// Przywracamy domyślny kolor tekstu zgody
 	const consentLabel = document.querySelector("label[for='consent']");
-	consentLabel.style.color = ""; // Usuwamy styl inline
+	consentLabel.style.color = "";
 }
 
 function validateForm(event) {
@@ -97,7 +87,7 @@ function validateForm(event) {
 	const consentLabel = document.querySelector("label[for='consent']");
 	if (!consentField.checked) {
 		consentField.parentElement.nextElementSibling.style.opacity = "1";
-		consentLabel.style.color = "red"; // Zmieniamy kolor tekstu na czerwony
+		consentLabel.style.color = "red";
 		isValid = false;
 	}
 
@@ -106,5 +96,5 @@ function validateForm(event) {
 		event.preventDefault();
 	}
 
-	return isValid; // Zwracamy true, jeśli formularz jest poprawny
+	return isValid;
 }

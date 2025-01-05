@@ -30,7 +30,7 @@ document.querySelectorAll(".realization").forEach((realization) => {
 	const gallery = realization.querySelector(".gallery");
 
 	mainImg.addEventListener("click", () => {
-		openModal(gallery, 0); // Otwórz modal z pierwszym zdjęciem w galerii
+		openModal(gallery, 0);
 	});
 });
 
