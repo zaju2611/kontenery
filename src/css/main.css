@@ -8,11 +8,11 @@
 
 @font-face {
 	font-family: "Host Grotesk";
-	src: url("../assets/fonts/HostGrotesk-Regular.ttf");
+	src: url("/dist/assets/fonts/HostGrotesk-Regular.ttf");
 }
 @font-face {
 	font-family: "Host Grotesk";
-	src: url("../assets/fonts/HostGrotesk-Bold.ttf");
+	src: url("/dist/assets/fonts/HostGrotesk-Light.ttf");
 }
 
 * {
@@ -726,11 +726,11 @@ strong {
 
 .image1 {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("../../dist/img/kontenery-handlowe-2.webp");
+		url("/dist/img/kontenery-handlowe-2.webp");
 }
 .image2 {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("../../dist/img/kontakt/contact-us.jpg");
+		url("/dist/img/kontakt/contact-us.jpg");
 }
 
 .hero-image h2 {
