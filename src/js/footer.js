@@ -8,11 +8,11 @@ const handleCurrentYear = () => {
 handleCurrentYear();
 
 const addActiveClassToFooterLink = () => {
-	const currentPath = window.location.pathname; // Pobiera ścieżkę URL bez domeny i portu
-	const footerLinks = document.querySelectorAll(".footer-nav a"); // Wszystkie linki w stopce
+	const currentPath = window.location.pathname;
+	const footerLinks = document.querySelectorAll(".footer-nav a");
 
 	footerLinks.forEach((link) => {
-		const linkPath = new URL(link.href).pathname; // Pobiera ścieżkę z atrybutu href linku
+		const linkPath = new URL(link.href).pathname;
 		if (linkPath === currentPath) {
 			link.classList.add("activeFooter");
 		}
