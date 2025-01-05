@@ -1,5 +1,5 @@
 :root {
-	--white: #fff;
+	--white: #eee;
 	--navy: #0e2549;
 	--grey: #3e5879;
 	--beige: #d8c4b6;
@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: "Host Grotesk";
-	src: url("/dist/assets/fonts/HostGrotesk-Regular.ttf");
+	src: url("/dist/assets/fonts/HostGrotesk-Bold.ttf");
 }
 @font-face {
 	font-family: "Host Grotesk";
@@ -436,13 +436,14 @@ strong {
 .containers-cards {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	gap: 15px;
 }
 
 .container-card {
 	position: relative;
 	width: 100%;
+	max-width: 400px;
 	height: 525px;
 	overflow: hidden;
 	flex-direction: column;
