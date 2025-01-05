@@ -1,21 +1,7 @@
 RewriteEngine on
-
-# Przekierowanie z www na wersję bez www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-# Przekierowanie na HTTPS
 RewriteCond %{ENV:HTTPS} !on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-# Przekierowanie index.html na /
 RewriteRule ^index\.html$ / [NC,R,L]
-
-# Usuwanie końcówki .html z URL
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-RewriteRule ^([^/.]+)$ $1.html [L]
-
-# Obsługa błędu 404
 ErrorDocument 404 /404.html

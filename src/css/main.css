@@ -971,6 +971,10 @@ footer {
 	margin-bottom: 1em;
 }
 
+.not-found-img {
+	max-width: 500px;
+}
+
 .subpage h4 {
 	font-size: 0.9rem;
 }
