@@ -7,23 +7,19 @@
 }
 
 @font-face {
-	font-family: "Montserrat";
-	src: url("/dist/assets/fonts/Montserrat-Thin.ttf");
+	font-family: "HostGrotesk";
+	src: url("/dist/assets/fonts/HostGrotesk-Bold.ttf");
 }
 @font-face {
-	font-family: "Montserrat";
-	src: url("/dist/assets/fonts/Montserrat-Regular.ttf");
-}
-@font-face {
-	font-family: "Montserrat";
-	src: url("/dist/assets/fonts/Montserrat-Bold.ttf");
+	font-family: "HostGrotesk";
+	src: url("/dist/assets/fonts/HostGrotesk-Light.ttf");
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Montserrat", sans-serif;
+	font-family: "HostGrotesk", sans-serif;
 	font-weight: 300;
 }
 
@@ -454,6 +450,9 @@ strong {
 	flex-direction: column;
 	flex-direction: column;
 	justify-content: space-between;
+	-webkit-box-shadow: 0px 4px 16px -9px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 4px 16px -9px rgba(66, 68, 90, 1);
+	box-shadow: 0px 4px 16px -9px rgba(66, 68, 90, 1);
 }
 
 .container-card:nth-child(odd) {
@@ -526,10 +525,6 @@ strong {
 
 /*===================== OPINION SECTION ==================*/
 
-.opinion,
-.container-map-section .intro-text {
-	text-align: center;
-}
 .opinion {
 	text-align: center;
 	padding: 20px;
@@ -558,7 +553,7 @@ strong {
 }
 
 .client-name {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -584,9 +579,9 @@ strong {
 	padding-left: 20px;
 }
 
-.description {
+/* .description {
 	text-align: center;
-}
+} */
 
 /*========================= CAROUSEL SECTION =====================*/
 
@@ -732,11 +727,11 @@ strong {
 
 .image1 {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("/dist/img/kontenery-handlowe-2.webp");
+		url("../img/kontenery-handlowe-2.webp");
 }
 .image2 {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("/dist/img/kontakt/contact-us.jpg");
+		url("../img/kontakt/contact-us.jpg");
 }
 
 .hero-image h2 {
@@ -1460,6 +1455,9 @@ textarea.error-border {
 	}
 	.opinion-box {
 		width: 48%;
+	}
+	.client-name {
+		font-size: 1.3rem;
 	}
 
 	/*======================== MAP SECTION =====================*/
