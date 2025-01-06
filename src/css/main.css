@@ -7,19 +7,23 @@
 }
 
 @font-face {
-	font-family: "Rubik";
-	src: url("/dist/assets/fonts/Rubik-ExtraBold.ttf");
+	font-family: "Montserrat";
+	src: url("/dist/assets/fonts/Montserrat-Thin.ttf");
 }
 @font-face {
-	font-family: "Rubik";
-	src: url("/dist/assets/fonts/Rubik-Light.ttf");
+	font-family: "Montserrat";
+	src: url("/dist/assets/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("/dist/assets/fonts/Montserrat-Bold.ttf");
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Rubik", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 }
 
