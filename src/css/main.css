@@ -734,9 +734,9 @@ strong {
 			rgba(0, 0, 0, 0.7),
 			rgba(0, 0, 0, 0.7)
 		),
-		url("../img/kontenery-handlowe-2.webp");
+		url("/dist/img/kontenery-handlowe-2.webp");
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("../img/kontenery-handlowe-2.webp");
+		url("/dist/img/kontenery-handlowe-2.webp");
 }
 .image2 {
 	background-image: -webkit-linear-gradient(
