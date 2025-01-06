@@ -105,7 +105,7 @@ strong {
 }
 
 .stock-ticker ul {
-	padding: 0.3rem;
+	padding: 0.5rem;
 
 	flex-shrink: 0;
 	min-width: 100%;
@@ -115,7 +115,7 @@ strong {
 	gap: 2rem;
 
 	color: var(--white);
-	animation: scroll-left 20s linear infinite;
+	animation: scroll-left 30s linear infinite;
 }
 
 @keyframes scroll-left {
