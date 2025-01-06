@@ -7,20 +7,22 @@
 }
 
 @font-face {
-	font-family: "HostGrotesk";
-	src: url("/dist/assets/fonts/HostGrotesk-Bold.ttf");
+	font-family: "Poppins";
+	src: url("/dist/assets/fonts/Poppins-Regular.ttf");
+	font-weight: 100;
 }
 @font-face {
-	font-family: "HostGrotesk";
-	src: url("/dist/assets/fonts/HostGrotesk-Light.ttf");
+	font-family: "Poppins";
+	src: url("/dist/assets/fonts/Poppins-SemiBold.ttf");
+	font-weight: 600;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "HostGrotesk", sans-serif;
-	font-weight: 300;
+	font-family: "Poppins", sans-serif;
+	font-weight: 100;
 }
 
 html {
