@@ -717,7 +717,7 @@ strong {
 .hero-image {
 	background-position: center;
 	background-repeat: no-repeat;
-	/* background-attachment: fixed; */
+	background-attachment: scroll;
 	background-size: cover;
 	height: 300px;
 	display: flex;
