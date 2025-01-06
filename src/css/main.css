@@ -709,20 +709,50 @@ strong {
 }
 
 /*========================== HERO IMAGE SECTION ==================*/
+
 .hero {
 	padding: 0;
-	position: relative; /* Upewniamy się, że pseudoelement będzie się pozycjonował względem hero */
-	overflow: hidden; /* Aby upewnić się, że pseudoelement nie wychodzi poza hero */
 }
 
 .hero-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	padding: 40px;
-	position: relative;
-	z-index: 1; /* Zapewni, że tekst będzie na wierzchu pseudoelementu */
+}
+@supports (-webkit-touch-callout: none) {
+	.hero-image {
+		background-attachment: scroll;
+	}
+}
+
+@supports not (-webkit-touch-callout: none) {
+	.hero-image {
+		background-attachment: fixed;
+	}
+}
+.image1 {
+	background-image: -webkit-linear-gradient(
+			rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.7)
+		),
+		url("../img/kontenery-handlowe-2.webp");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("../img/kontenery-handlowe-2.webp");
+}
+.image2 {
+	background-image: -webkit-linear-gradient(
+			rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.7)
+		),
+		url("../img/kontakt/contact-us.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("../img/kontakt/contact-us.jpg");
 }
 
 .hero-image h2 {
@@ -740,36 +770,6 @@ strong {
 	border: 3px solid var(--beige);
 	border-radius: 15px;
 	padding: 10px;
-}
-
-.image1::before {
-	content: ""; /* Musimy mieć jakiś tekst, aby pseudoelement się pojawił */
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("/dist/img/kontenery-handlowe-2.webp");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed; /* Tło będzie się przewijać razem z zawartością */
-	z-index: -1; /* Pseudoelement ma być pod tekstem */
-}
-
-.image2::before {
-	content: ""; /* Musimy mieć jakiś tekst, aby pseudoelement się pojawił */
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("/dist/img/kontakt/contact-us.jpg");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed; /* Tło będzie się przewijać razem z zawartością */
-	z-index: -1; /* Pseudoelement ma być pod tekstem */
 }
 
 /*======================= SPECJALIST SECTION ===================*/
