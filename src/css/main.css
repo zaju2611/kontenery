@@ -427,8 +427,7 @@ strong {
 }
 
 .container-image {
-	width: 90%;
-	max-width: 500px;
+	max-width: 90%;
 	margin: 1em auto;
 	display: block;
 }
@@ -985,7 +984,7 @@ footer {
 
 /*====================== SUBPAGE ========================*/
 .subpage-img {
-	width: 100%;
+	max-width: 100%;
 	margin-bottom: 1em;
 }
 
@@ -1451,9 +1450,8 @@ textarea.error-border {
 		margin-right: 70px;
 	}
 	.container-image {
-		max-width: 700px;
-		max-height: 700px;
-		width: 50%;
+		max-width: 50%;
+		max-height: 600px;
 	}
 
 	/*======================= CARDS CONTAINER ================*/
@@ -1603,7 +1601,7 @@ textarea.error-border {
 		margin-bottom: 1em;
 	}
 	.subpage-img {
-		width: 45%;
+		max-width: 45%;
 		margin-right: 2em;
 		margin-bottom: 0;
 	}
