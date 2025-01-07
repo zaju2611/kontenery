@@ -1378,6 +1378,9 @@ textarea.error-border {
 }
 
 @media (min-width: 768px) {
+	.container-image {
+		max-width: 70%;
+	}
 	.carousel-gallery {
 		height: 550px;
 	}
