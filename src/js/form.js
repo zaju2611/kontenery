@@ -19,7 +19,7 @@ document
 				return;
 			}
 
-			emailjs.send("service_l5e2jt4", "template_2zxzxce", formObject).then(
+			emailjs.send("service_8bjzcai", "template_2zxzxce", formObject).then(
 				function (response) {
 					console.log("Sukces:", response);
 
