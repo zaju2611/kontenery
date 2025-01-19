@@ -101,7 +101,7 @@ strong {
 
 	overflow: hidden;
 	user-select: none;
-	--gap: 0rem;
+	--gap: 2rem;
 	gap: var(--gap);
 	background: var(--navy);
 }
@@ -670,7 +670,7 @@ strong {
 	transform: translateY(-50%);
 	color: rgba(255, 255, 255, 0.8);
 	cursor: pointer;
-	border-radius: 0.25rem;
+
 	padding: 0 0.5rem;
 	background-color: rgba(0, 0, 0, 0.3);
 }
@@ -1509,7 +1509,7 @@ textarea.error-border {
 		gap: 15px;
 	}
 	.opinion-box {
-		width: 48%;
+		width: 30%;
 	}
 	.client-name {
 		font-size: 1.3rem;
