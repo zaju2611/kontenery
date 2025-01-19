@@ -454,7 +454,7 @@ strong {
 }
 
 .container-image {
-	max-width: 90%;
+	max-width: 80%;
 	margin: 1em auto;
 	display: block;
 }
@@ -477,6 +477,7 @@ strong {
 	width: 100%;
 	max-width: 400px;
 	height: 525px;
+	border-radius: 20px;
 	overflow: hidden;
 	flex-direction: column;
 	flex-direction: column;
@@ -521,7 +522,8 @@ strong {
 
 .container-card button {
 	position: absolute;
-	bottom: 15px;
+	bottom: 20px;
+	right: 25px;
 	width: 50%;
 	max-width: 200px;
 	padding: 10px;
@@ -632,6 +634,8 @@ strong {
 	max-width: 750px;
 	height: 80%;
 	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
 }
 .slide {
 	position: absolute;
@@ -1414,13 +1418,13 @@ textarea.error-border {
 
 @media (min-width: 768px) {
 	.container-image {
-		max-width: 70%;
+		max-width: 60%;
 	}
 	.carousel-gallery {
 		height: 550px;
 	}
 	.carousel-button {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 }
 
@@ -1488,8 +1492,8 @@ textarea.error-border {
 		margin-right: 70px;
 	}
 	.container-image {
-		max-width: 50%;
-		max-height: 600px;
+		max-width: 45%;
+		max-height: 500px;
 	}
 
 	/*======================= CARDS CONTAINER ================*/
