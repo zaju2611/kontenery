@@ -15,7 +15,9 @@
     <header>
         <!-- @include 'nav.kit'-->
         <div class="image-section">
-            <img src="/dist/img/realizacje-012.webp" alt="zdjęcie pawilonu" />
+            <img src="/dist/img/realizacje-012.webp"
+                srcset="/dist/img/realizacje-012_mob.webp 768w, /dist/img/realizacje-012.webp 1200w"
+                sizes="(max-width: 768px) 100vw, 1200px" alt="zdjęcie pawilonu" />
         </div>
     </header>
     <main>
@@ -289,8 +291,8 @@
                 <p class="intro-text">Przekonaj się co klienci sądzą o nas i współpracy z nami. Dołącz do grona naszych
                     zadowolonych klientów !!</p>
 
-                <div class="opinion-group">
-                    <div class="opinion-box hidden-element">
+                <div class="opinion-group hidden-element">
+                    <div class="opinion-box ">
 
                         <i class="fa-regular fa-face-grin-hearts"></i>
                         <div class="stars-container">
@@ -305,7 +307,7 @@
                         <p class="client-opinion">Świetna jakość produktów i szybka realizacja zamówienia. Gorąco
                             polecam!</p>
                     </div>
-                    <div class="opinion-box hidden-element">
+                    <div class="opinion-box">
                         <i class="fa-regular fa-face-grin-hearts"></i>
                         <div class="stars-container">
                             <i class="fa-solid fa-star"></i>
@@ -318,7 +320,7 @@
                         <p class="client-opinion">Współpraca na najwyższym poziomie! Wszystko zgodnie z ustaleniami,
                             polecam</p>
                     </div>
-                    <div class="opinion-box hidden-element">
+                    <div class="opinion-box">
                         <i class="fa-regular fa-face-grin-hearts"></i>
                         <div class="stars-container">
                             <i class="fa-solid fa-star"></i>
@@ -333,9 +335,9 @@
                     </div>
                 </div>
 
-                <div class="opinion-group ">
+                <div class="opinion-group hidden-element">
 
-                    <div class="opinion-box hidden-element">
+                    <div class="opinion-box">
                         <i class="fa-regular fa-face-grin-hearts"></i>
                         <div class="stars-container">
                             <i class="fa-solid fa-star"></i>
@@ -352,7 +354,7 @@
 
 
 
-                    <div class="opinion-box hidden-element">
+                    <div class="opinion-box">
                         <i class="fa-regular fa-face-grin-hearts"></i>
                         <div class="stars-container">
                             <i class="fa-solid fa-star"></i>
@@ -366,7 +368,7 @@
                             zdecydowałem
                             się na tę firmę.</p>
                     </div>
-                    <div class="opinion-box hidden-element">
+                    <div class="opinion-box">
                         <i class="fa-regular fa-face-grin-hearts"></i>
                         <div class="stars-container">
                             <i class="fa-solid fa-star"></i>
@@ -381,9 +383,7 @@
                     </div>
                 </div>
             </section>
-
         </div>
-
         <section class="transport-section ">
             <div class="wrapper hidden-element">
                 <div class="transport">
