@@ -455,6 +455,9 @@ strong {
 	font-weight: bold;
 	margin: 1em 0;
 }
+.main-title {
+	margin: 0 0 1em 0;
+}
 
 .subheading {
 	text-align: left;
